@@ -15,7 +15,7 @@ export default function Navigation() {
     { href: "/benefits", label: "Benefits" },
     { href: "/contact", label: "Contact" },
   ];
-
+//
   const isActive = (href: string) => {
     if (href === "/") {
       return pathname === "/";
