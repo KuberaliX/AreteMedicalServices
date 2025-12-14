@@ -6,7 +6,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-2xl font-bold text-red-600 mb-4">ARETE</h3>
+            <img 
+              src="//img1.wsimg.com/isteam/ip/f3e789ba-88da-4b82-bceb-4888b8d2b659/blob.png/:/rs=h:75,cg:true,m/qt=q:95" 
+              alt="Arete Medical Services" 
+              className="h-12"
+            />
             <p className="text-gray-400">
               Medical Services dedicated to your recovery and well-being.
             </p>
@@ -15,9 +19,10 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-gray-400">
               <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
-              <li><Link href="/products" className="hover:text-white transition-colors">Products</Link></li>
-              <li><Link href="/benefits" className="hover:text-white transition-colors">Benefits</Link></li>
+              <li><Link href="/about_us" className="hover:text-white transition-colors">About</Link></li>
+              <li><Link href="/devices" className="hover:text-white transition-colors">Devices</Link></li>
+              <li><Link href="/clinical_partners" className="hover:text-white transition-colors">Clinical Partners</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
           <div>
