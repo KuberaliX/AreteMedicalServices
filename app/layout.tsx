@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Chatbot from "./components/Chatbot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ARETE Medical Services - Post-Knee Surgery Rehabilitation",
-  description: "Leading provider of rehabilitation products and services for patients recovering from knee surgery. Expert care and innovative solutions for your recovery journey.",
+  title: "ROMTech - The Modern Technology of Medical Rehabilitation®",
+  description: "PortableConnect® delivers clinician-controlled physical therapy sessions to patients in their homes. Recover from knee replacement, hip replacement, ACL, and other surgeries in half the time with faster outcomes and better pain management.",
 };
 
 export default function RootLayout({
@@ -28,6 +29,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Chatbot />
       </body>
     </html>
   );

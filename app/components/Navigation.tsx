@@ -1,19 +1,18 @@
 'use client';
 
-import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/products", label: "Products" },
-    { href: "/benefits", label: "Benefits" },
+    { href: "/devices", label: "Devices" },
+    { href: "/testimonials", label: "Testimonials" },
     { href: "/contact", label: "Contact" },
+    { href: "/about", label: "About" },
   ];
 //
   const isActive = (href: string) => {
@@ -24,66 +23,37 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 w-full bg-white shadow-lg z-50 border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <Link href="/" className="flex items-center">
-            <h1 className="text-2xl font-bold text-red-600">ARETE</h1>
-            <span className="ml-2 text-lg text-gray-800 font-medium">Medical Services</span>
+    <nav className="fixed top-0 left-0 right-0 w-full bg-gray-900 shadow-lg z-50 border-b border-gray-700">
+      <div className="max-w-[1920px] mx-auto px-6 lg:px-12 xl:px-16">
+        <div className="flex items-center h-24 lg:h-28 gap-8 lg:gap-12 xl:gap-16">
+          <Link href="/" className="flex items-center flex-shrink-0">
+            <Image
+              src="https://img1.wsimg.com/isteam/ip/f3e789ba-88da-4b82-bceb-4888b8d2b659/blob.png/:/rs=h:75,cg:true,m/qt=q:95"
+              alt="Arete Medical Services"
+              width={200}
+              height={75}
+              className="h-12 lg:h-16 xl:h-20 w-auto"
+              priority
+            />
           </Link>
           
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6 items-center">
+          {/* Navigation Links - Always visible on all screen sizes */}
+          <div className="flex space-x-6 lg:space-x-8 xl:space-x-10 items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`transition-colors font-semibold text-sm uppercase tracking-wide ${
+                className={`transition-colors font-semibold text-base lg:text-lg xl:text-xl uppercase tracking-wide whitespace-nowrap hover:scale-105 ${
                   isActive(link.href)
-                    ? "text-red-600 border-b-2 border-red-600 pb-1"
-                    : "text-gray-800 hover:text-red-600"
+                    ? "text-white border-b-4 border-red-500 pb-2"
+                    : "text-gray-300 hover:text-white"
                 }`}
               >
                 {link.label}
               </Link>
             ))}
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-gray-800 hover:text-red-600 transition-colors"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
         </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden pb-4 space-y-2 border-t border-gray-200 mt-2 pt-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`block py-2 px-2 rounded transition-colors font-semibold text-sm uppercase tracking-wide ${
-                  isActive(link.href)
-                    ? "text-red-600 bg-red-50"
-                    : "text-gray-800 hover:text-red-600 hover:bg-red-50"
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        )}
       </div>
     </nav>
   );
