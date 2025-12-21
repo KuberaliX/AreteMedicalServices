@@ -85,10 +85,6 @@ export default function Contact() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
-                  <div>
-                    <p className="font-semibold text-gray-900 mb-1">Address</p>
-                    <p className="text-gray-600">101 Silvermine Road<br />Brookfield, CT 06804</p>
-                  </div>
                 </div>
               </div>
 
