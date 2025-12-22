@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import DeviceModal from "../components/DeviceModal";
@@ -282,7 +283,7 @@ export default function Devices() {
                       </div>
 
                       {/* Insurance Coverage */}
-                      <div className="bg-blue-50 rounded-2xl p-10 text-center">
+                      <div className="bg-blue-50 rounded-2xl p-10 text-center mb-12">
                         <div className="max-w-3xl mx-auto">
                           <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6">
                             <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -294,6 +295,129 @@ export default function Devices() {
                             Our devices are covered by most insurance payers, making advanced rehabilitation technology 
                             accessible to patients. Contact us to verify your coverage and get started on your recovery journey.
                           </p>
+                        </div>
+                      </div>
+
+                          {/* Clinical Study Evidence */}
+                      <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-10 text-white">
+                        <div className="max-w-4xl mx-auto">
+                          <div className="text-center mb-8">
+                            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-4">
+                              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                                <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
+                              </svg>
+                              <span className="text-sm font-semibold">Published Research</span>
+                            </div>
+                            <h4 className="text-3xl font-extrabold mb-4">Journal of Arthroplasty Study</h4>
+                            <p className="text-gray-300 text-lg mb-2">
+                              A Home-Based, Remote-Clinician-Controlled, Physical Therapy Device Leads to Superior Outcomes 
+                              When Compared to Standard Physical Therapy for Rehabilitation after Total Knee Arthroplasty
+                            </p>
+                            <p className="text-gray-400 text-sm mb-6">
+                              Published: October 14, 2022 | 270 Consecutive TKA Patients
+                            </p>
+                          </div>
+
+                          {/* Study Results Grid */}
+                          <div className="grid md:grid-cols-2 gap-6 mb-8">
+                            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                              <div className="text-4xl font-extrabold text-red-400 mb-2">31%</div>
+                              <div className="text-xl font-bold mb-2">Less Pain</div>
+                              <div className="text-sm text-gray-300 mb-1">P&lt;0.0001 - Statistically Significant</div>
+                              <div className="text-xs text-gray-400">3.6 vs 5.2 at 6 weeks | 1.4 vs 2.9 at 12 weeks</div>
+                            </div>
+                            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                              <div className="text-4xl font-extrabold text-red-400 mb-2">30%</div>
+                              <div className="text-xl font-bold mb-2">Higher KOOS JR Score</div>
+                              <div className="text-sm text-gray-300 mb-1">P&lt;0.0001 - Improved Function</div>
+                              <div className="text-xs text-gray-400">84.0 vs 74.3 at 12 weeks</div>
+                            </div>
+                            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                              <div className="text-4xl font-extrabold text-red-400 mb-2">3x</div>
+                              <div className="text-xl font-bold mb-2">Fewer MUA Procedures</div>
+                              <div className="text-sm text-gray-300 mb-1">Manipulation Under Anesthesia</div>
+                              <div className="text-xs text-gray-400">2 vs 6 procedures (P=0.28)</div>
+                            </div>
+                            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                              <div className="text-4xl font-extrabold text-red-400 mb-2">4x</div>
+                              <div className="text-xl font-bold mb-2">More Therapy Sessions</div>
+                              <div className="text-sm text-gray-300 mb-1">Average over 12 weeks</div>
+                              <div className="text-xs text-gray-400">84 vs 19 sessions (65 more sessions)</div>
+                            </div>
+                          </div>
+
+                          {/* Range of Motion Data */}
+                          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-8">
+                            <h5 className="font-bold text-lg mb-4 text-center">Improved Range of Motion at 6 Weeks (P&lt;0.0001)</h5>
+                            <div className="grid md:grid-cols-2 gap-4 text-sm">
+                              <div>
+                                <p className="font-semibold mb-2">Flexion:</p>
+                                <p className="text-gray-300">PortableConnect®: <span className="font-bold text-red-400">116.7°</span> vs STP: 101.8° (<span className="text-orange-300">↑15%</span>)</p>
+                              </div>
+                              <div>
+                                <p className="font-semibold mb-2">Extension:</p>
+                                <p className="text-gray-300">PortableConnect®: <span className="font-bold text-red-400">-1.8°</span> vs STP: -3.7° (<span className="text-orange-300">↑51%</span>)</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Study Details */}
+                          <div className="bg-white/5 rounded-xl p-6 mb-6">
+                            <h5 className="font-bold text-lg mb-4">Study Methodology</h5>
+                            <ul className="space-y-2 text-gray-300 text-sm">
+                              <li className="flex items-start gap-2">
+                                <svg className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                </svg>
+                                <span>135 patients using PortableConnect® vs 135 patients with standard therapy</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <svg className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                </svg>
+                                <span>Same implant, approach, and surgical protocol for all patients</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <svg className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                </svg>
+                                <span>Progress evaluated at 2, 6, and 12 weeks post-surgery</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <svg className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                </svg>
+                                <span>Statistically significant differences found at all time points</span>
+                              </li>
+                            </ul>
+                          </div>
+
+                          {/* Citation */}
+                          <div className="text-center">
+                            <p className="text-gray-400 text-xs mb-2">Reference:</p>
+                            <p className="text-gray-300 text-sm italic mb-4">
+                              Summers S, Nunley R, Slotkin E. A home-based, remote-clinician-controlled, physical therapy device 
+                              leads to superior outcomes when compared to standard physical therapy for rehabilitation after total 
+                              knee arthroplasty. J Arthroplasty. 2022;50883-5403(22):00929-9. doi:10.1016/j.arth.2022.10.009
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                              <a
+                                href="https://romtech.com/wp-content/uploads/2025/10/PC-JOA-Study.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors text-sm"
+                              >
+                                View Full Study PDF
+                              </a>
+                              <Link
+                                href="/research"
+                                className="border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm"
+                              >
+                                View Detailed Research Page
+                              </Link>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
