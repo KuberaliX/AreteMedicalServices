@@ -16,7 +16,8 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
               <li><Link href="/devices" className="hover:text-white transition-colors">Devices</Link></li>
-              <li><Link href="/testimonials" className="hover:text-white transition-colors">Testimonials</Link></li>
+              <li><Link href="/research" className="hover:text-white transition-colors">Research</Link></li>
+              {/* <li><Link href="/testimonials" className="hover:text-white transition-colors">Testimonials</Link></li> */}
               <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
               <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
             </ul>
@@ -25,7 +26,8 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Resources</h4>
             <ul className="space-y-2 text-gray-400">
               <li><Link href="/devices" className="hover:text-white transition-colors">PortableConnect®</Link></li>
-              <li><Link href="/testimonials" className="hover:text-white transition-colors">Patient Stories</Link></li>
+              <li><Link href="/research" className="hover:text-white transition-colors">Clinical Studies</Link></li>
+              {/* <li><Link href="/testimonials" className="hover:text-white transition-colors">Patient Stories</Link></li> */}
               <li><Link href="/about" className="hover:text-white transition-colors">About ROMTech</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
             </ul>

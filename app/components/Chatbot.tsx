@@ -76,10 +76,15 @@ export default function Chatbot() {
       return "You can visit our contact page to get in touch with us. We'd be happy to answer any questions and help you learn more about PortableConnect®.";
     }
 
-    // Testimonials
-    if (lowerMessage.includes('testimonial') || lowerMessage.includes('review') || lowerMessage.includes('patient') || lowerMessage.includes('story')) {
-      return "We have many patient success stories! You can visit our testimonials page to read about real patients who have used PortableConnect® and achieved amazing recovery results.";
+    // Research/Studies
+    if (lowerMessage.includes('study') || lowerMessage.includes('research') || lowerMessage.includes('clinical') || lowerMessage.includes('evidence') || lowerMessage.includes('data') || lowerMessage.includes('journal')) {
+      return "We have published research in the Journal of Arthroplasty showing superior outcomes with PortableConnect®. The study found 31% less pain, 30% higher KOOS JR scores, 3x fewer MUA procedures, and 4x more therapy sessions compared to standard therapy. Visit our Research page to see the full study details and results.";
     }
+
+    // Testimonials
+    // if (lowerMessage.includes('testimonial') || lowerMessage.includes('review') || lowerMessage.includes('patient') || lowerMessage.includes('story')) {
+    //   return "We have many patient success stories! You can visit our testimonials page to read about real patients who have used PortableConnect® and achieved amazing recovery results.";
+    // }
 
     // Default responses
     if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
@@ -91,7 +96,7 @@ export default function Chatbot() {
     }
 
     // Fallback
-    return "I can help you learn about PortableConnect®, including device features, recovery times, insurance coverage, FDA approval, and patient success stories. What would you like to know more about?";
+    return "I can help you learn about PortableConnect®, including device features, recovery times, insurance coverage, FDA approval, and clinical research studies. What would you like to know more about?";
   };
 
   const handleSendMessage = async () => {

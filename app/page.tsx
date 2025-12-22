@@ -77,12 +77,12 @@ export default function Home() {
             >
               Explore Our Devices
             </Link>
-            <Link
+            {/* <Link
               href="/testimonials"
               className="border-4 border-red-600 text-red-600 px-12 py-6 rounded-xl font-bold text-xl lg:text-2xl hover:bg-red-50 transition-all duration-300 text-center min-w-[280px]"
             >
               View Patient Success Stories
-            </Link>
+            </Link> */}
           </div>
 
           {/* Trust Indicators - Larger */}
@@ -300,6 +300,120 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Clinical Study Evidence Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-block mb-4">
+              <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-blue-100 text-blue-700 border border-blue-200">
+                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                  <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
+                </svg>
+                Published Research
+              </span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
+              Clinically Proven Results
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              A peer-reviewed study published in the <span className="font-semibold">Journal of Arthroplasty</span> demonstrates 
+              superior outcomes with PortableConnect® compared to standard physical therapy
+            </p>
+          </div>
+
+          {/* Study Highlights */}
+          <div className="bg-gradient-to-br from-red-600 to-red-700 rounded-3xl p-8 lg:p-12 text-white shadow-2xl mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="text-4xl lg:text-5xl font-extrabold mb-2">31%</div>
+                <div className="text-lg font-bold mb-1">Less Pain</div>
+                <div className="text-sm text-red-100 mb-2">P&lt;0.0001</div>
+                <div className="text-xs text-red-200">3.6 vs 5.2 at 6 weeks</div>
+              </div>
+              <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="text-4xl lg:text-5xl font-extrabold mb-2">30%</div>
+                <div className="text-lg font-bold mb-1">Higher KOOS JR</div>
+                <div className="text-sm text-red-100 mb-2">P&lt;0.0001</div>
+                <div className="text-xs text-red-200">84.0 vs 74.3 at 12 weeks</div>
+              </div>
+              <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="text-4xl lg:text-5xl font-extrabold mb-2">3x</div>
+                <div className="text-lg font-bold mb-1">Fewer MUA</div>
+                <div className="text-sm text-red-100 mb-2">P=0.28</div>
+                <div className="text-xs text-red-200">2 vs 6 procedures</div>
+              </div>
+              <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="text-4xl lg:text-5xl font-extrabold mb-2">4x</div>
+                <div className="text-lg font-bold mb-1">More Sessions</div>
+                <div className="text-sm text-red-100 mb-2">Over 12 weeks</div>
+                <div className="text-xs text-red-200">84 vs 19 sessions</div>
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="text-2xl font-bold mb-4">Study Overview</h3>
+              <div className="grid md:grid-cols-2 gap-4 text-sm mb-4">
+                <div>
+                  <p className="font-semibold mb-2">270 Consecutive TKA Patients</p>
+                  <p className="text-red-100">135 PortableConnect® vs 135 Standard Therapy</p>
+                </div>
+                <div>
+                  <p className="font-semibold mb-2">Published: October 14, 2022</p>
+                  <p className="text-red-100">Journal of Arthroplasty</p>
+                </div>
+              </div>
+              <div className="grid md:grid-cols-2 gap-4 text-sm mb-4">
+                <div>
+                  <p className="font-semibold mb-2">Range of Motion at 6 Weeks:</p>
+                  <p className="text-red-100">116.7° flexion vs 101.8° (↑15%) | -1.8° vs -3.7° extension (↑51%)</p>
+                </div>
+                <div>
+                  <p className="font-semibold mb-2">Pain Scores at 12 Weeks:</p>
+                  <p className="text-red-100">1.4 vs 2.9 (PortableConnect® vs Standard Therapy)</p>
+                </div>
+              </div>
+              <p className="text-red-100 mt-4 text-sm">
+                <strong>Conclusion:</strong> PortableConnect was superior to standard physical therapy protocol following TKA. 
+                Statistically significant differences were found at all time points (2, 6, and 12 weeks) for all outcome measures 
+                in favor of PortableConnect®.
+              </p>
+            </div>
+          </div>
+
+          {/* Study Citation */}
+          <div className="bg-gray-50 rounded-2xl p-8 text-center">
+            <p className="text-gray-600 mb-4">
+              <strong>Reference:</strong> Summers S, Nunley R, Slotkin E. A home-based, remote-clinician-controlled, physical therapy 
+              device leads to superior outcomes when compared to standard physical therapy for rehabilitation after total knee arthroplasty. 
+              <em>J Arthroplasty.</em> 2022;50883-5403(22):00929-9. doi:10.1016/j.arth.2022.10.009
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://romtech.com/wp-content/uploads/2025/10/PC-JOA-Study.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-red-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-red-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                View Full Study PDF
+              </a>
+              <Link
+                href="/research"
+                className="inline-flex items-center gap-2 border-2 border-red-600 text-red-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-red-50 transition-all duration-300"
+              >
+                View Detailed Research
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Device Features Section - Enhanced */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -443,7 +557,7 @@ export default function Home() {
                     </svg>
                   </span>
                 </Link>
-                <Link
+                {/* <Link
                   href="/testimonials"
                   className="group bg-white/10 backdrop-blur-sm border-2 border-white/20 text-white px-10 py-5 rounded-xl font-semibold text-lg hover:bg-white/20 hover:border-white/40 transition-all duration-300"
                 >
@@ -453,7 +567,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </span>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
