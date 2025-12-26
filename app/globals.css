@@ -49,3 +49,95 @@ html {
 .animate-fade-in {
   animation: fade-in 0.3s ease-out;
 }
+
+/* Clock rotation animation for Accelerated Recovery - Curved arrows rotating around clock */
+@keyframes rotate-clock-arrows {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-clock-arrows {
+  animation: rotate-clock-arrows 3s linear infinite;
+}
+
+/* Award badge pulse/shine animation with ribbon flow */
+@keyframes award-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes award-shine {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 25px 8px rgba(59, 130, 246, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+  }
+}
+
+@keyframes ribbon-flow {
+  0%, 100% {
+    transform: translateY(0) scaleY(1);
+  }
+  50% {
+    transform: translateY(2px) scaleY(1.1);
+  }
+}
+
+.animate-award-pulse {
+  animation: award-pulse 2s ease-in-out infinite;
+}
+
+.animate-award-shine {
+  animation: award-shine 2.5s ease-in-out infinite;
+}
+
+.animate-ribbon-flow {
+  animation: ribbon-flow 2s ease-in-out infinite;
+}
+
+/* Piggy bank bounce animation with coin drop */
+@keyframes piggy-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes coin-drop {
+  0% {
+    transform: translateY(-15px) scale(0.8);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(5px) scale(1);
+    opacity: 0;
+  }
+}
+
+.animate-piggy-bounce {
+  animation: piggy-bounce 2.5s ease-in-out infinite;
+}
+
+.animate-coin-drop {
+  animation: coin-drop 2s ease-in-out infinite;
+}
