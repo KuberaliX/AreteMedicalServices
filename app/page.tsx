@@ -52,12 +52,12 @@ export default function Home() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-2xl">
               The Modern Technology of
               <span className="block text-red-400 mt-3">
-                Medical RehabilitationÂ®
+                Medical Rehabilitation-«
               </span>
             </h1>
             
             <p className="text-xl sm:text-2xl lg:text-3xl text-white leading-relaxed max-w-5xl mx-auto mb-10 font-medium drop-shadow-lg">
-              The <span className="font-bold">PortableConnectÂ®</span> is a medical device that delivers 
+              The <span className="font-bold">PortableConnect-«</span> is a medical device that delivers 
               <span className="font-bold"> clinician-controlled physical therapy sessions</span> to patients 
               in their homes. Recover from knee replacement, hip replacement, ACL, and other surgeries in 
               <span className="font-bold text-red-400"> half the time</span> with faster outcomes and better pain management.
@@ -126,13 +126,13 @@ export default function Home() {
               </span>
             </div>
             <h2 className="text-4xl lg:text-6xl font-extrabold text-gray-900 mb-6">
-              See How PortableConnectÂ®
+              See How PortableConnect-«
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-700 mt-3">
                 Transforms Recovery
               </span>
             </h2>
             <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Watch real patients demonstrate how PortableConnectÂ® delivers clinician-controlled therapy sessions 
+              Watch real patients demonstrate how PortableConnect-« delivers clinician-controlled therapy sessions 
               in the comfort of their homes. Experience the device in action and see how it accelerates recovery.
             </p>
           </div>
@@ -184,7 +184,7 @@ export default function Home() {
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-white text-lg lg:text-xl font-bold mb-1">
-                        PortableConnectÂ® in Action
+                        PortableConnect-« in Action
                       </p>
                       <p className="text-white/80 text-sm lg:text-base">
                         Real patient demonstrations and device features
@@ -248,7 +248,7 @@ export default function Home() {
               href="/devices"
               className="inline-flex items-center gap-3 bg-red-600 text-white px-10 py-5 rounded-xl font-semibold text-lg hover:bg-red-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform"
             >
-              <span>Learn More About PortableConnectÂ®</span>
+              <span>Learn More About PortableConnect-«</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -272,7 +272,7 @@ export default function Home() {
                 9.2M+
               </div>
               <div className="text-gray-300 text-lg font-medium">Therapy Sessions Completed</div>
-              <div className="text-gray-500 text-sm mt-1">Patients using PortableConnectÂ®</div>
+              <div className="text-gray-500 text-sm mt-1">Patients using PortableConnect-«</div>
             </div>
             <div className="text-center group">
               <div className="text-5xl lg:text-6xl font-extrabold mb-3 bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
@@ -283,10 +283,10 @@ export default function Home() {
             </div>
             <div className="text-center group">
               <div className="text-5xl lg:text-6xl font-extrabold mb-3 bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
-                112Â° vs 99Â°
+                112-¦ vs 99-¦
               </div>
               <div className="text-gray-300 text-lg font-medium">Range of Motion at 2 Weeks</div>
-              <div className="text-gray-500 text-sm mt-1">PortableConnectÂ® vs. standard care</div>
+              <div className="text-gray-500 text-sm mt-1">PortableConnect-« vs. standard care</div>
             </div>
             <div className="text-center group">
               <div className="text-5xl lg:text-6xl font-extrabold mb-3 bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
@@ -317,7 +317,7 @@ export default function Home() {
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               A peer-reviewed study published in the <span className="font-semibold">Journal of Arthroplasty</span> demonstrates 
-              superior outcomes with PortableConnectÂ® compared to standard physical therapy
+              superior outcomes with PortableConnect-« compared to standard physical therapy
             </p>
           </div>
 
@@ -359,7 +359,7 @@ export default function Home() {
                   <p className="text-lg font-semibold mb-3">Total Therapy Sessions (12 weeks)</p>
                   <div className="flex items-end gap-4 mb-3">
                     <div className="flex-1">
-                      <div className="text-sm text-red-100 mb-1">PortableConnectÂ®</div>
+                      <div className="text-sm text-red-100 mb-1">PortableConnect-«</div>
                       <div className="h-28 bg-white/15 rounded-lg overflow-hidden relative">
                         <div className="absolute bottom-0 left-0 right-0 bg-white/90" style={{ height: '100%' }}></div>
                         <div className="absolute inset-0 flex items-end justify-center pb-2">
@@ -377,7 +377,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <p className="text-red-100 font-semibold">4x more sessions completed with PortableConnectÂ®</p>
+                  <p className="text-red-100 font-semibold">4x more sessions completed with PortableConnect-«</p>
                 </div>
 
                 {/* Pain reduction */}
@@ -405,11 +405,11 @@ export default function Home() {
                   <div className="space-y-2 text-sm text-red-100">
                     <div className="flex items-center justify-between">
                       <span>Flexion</span>
-                      <span className="font-semibold">116.7Â° vs 101.8Â°</span>
+                      <span className="font-semibold">116.7-¦ vs 101.8-¦</span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span>Extension</span>
-                      <span className="font-semibold">-1.8Â° vs -3.7Â°</span>
+                      <span className="font-semibold">-1.8-¦ vs -3.7-¦</span>
                     </div>
                   </div>
                   <div className="mt-4">
@@ -444,7 +444,7 @@ export default function Home() {
                   <p className="text-lg font-semibold mb-3">Manipulation Under Anesthesia (12 weeks)</p>
                   <div className="flex items-end gap-4 mb-3">
                     <div className="flex-1">
-                      <div className="text-sm text-red-100 mb-1">PortableConnectÂ®</div>
+                      <div className="text-sm text-red-100 mb-1">PortableConnect-«</div>
                       <div className="h-20 bg-white/15 rounded-lg overflow-hidden relative">
                         <div className="absolute bottom-0 left-0 right-0 bg-white/90" style={{ height: '33%' }}></div>
                         <div className="absolute inset-0 flex items-end justify-center pb-1">
@@ -472,7 +472,7 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-4 text-sm mb-4">
                 <div>
                   <p className="font-semibold mb-2">270 Consecutive TKA Patients</p>
-                  <p className="text-red-100">135 PortableConnectÂ® vs 135 Standard Therapy</p>
+                  <p className="text-red-100">135 PortableConnect-« vs 135 Standard Therapy</p>
                 </div>
                 <div>
                   <p className="font-semibold mb-2">Published: October 14, 2022</p>
@@ -482,17 +482,17 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-4 text-sm mb-4">
                 <div>
                   <p className="font-semibold mb-2">Range of Motion at 6 Weeks:</p>
-                  <p className="text-red-100">116.7Â° flexion vs 101.8Â° (â†‘15%) | -1.8Â° vs -3.7Â° extension (â†‘51%)</p>
+                  <p className="text-red-100">116.7-¦ flexion vs 101.8-¦ (Gåæ15%) | -1.8-¦ vs -3.7-¦ extension (Gåæ51%)</p>
                 </div>
                 <div>
                   <p className="font-semibold mb-2">Pain Scores at 12 Weeks:</p>
-                  <p className="text-red-100">1.4 vs 2.9 (PortableConnectÂ® vs Standard Therapy)</p>
+                  <p className="text-red-100">1.4 vs 2.9 (PortableConnect-« vs Standard Therapy)</p>
                 </div>
               </div>
               <p className="text-red-100 mt-4 text-sm">
                 <strong>Conclusion:</strong> PortableConnect was superior to standard physical therapy protocol following TKA. 
                 Statistically significant differences were found at all time points (2, 6, and 12 weeks) for all outcome measures 
-                in favor of PortableConnectÂ®.
+                in favor of PortableConnect-«.
               </p>
             </div>
           </div>
@@ -540,7 +540,7 @@ export default function Home() {
             <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
               The Power of
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-700 mt-2">
-                PortableConnectÂ®
+                PortableConnect-«
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -677,7 +677,7 @@ export default function Home() {
                 Faster Recovery, Better Results
               </h2>
               <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Join thousands of patients who have completed millions of therapy sessions with PortableConnectÂ®. 
+                Join thousands of patients who have completed millions of therapy sessions with PortableConnect-«. 
                 Recover in half the time with clinician-controlled therapy delivered to your home.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
