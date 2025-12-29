@@ -7,8 +7,8 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      {/* Hero Section - Optimized for Elderly Patients */}
-      <section className="relative pt-32 overflow-hidden min-h-screen flex items-center">
+      {/* Hero Section - Professional Medical Device Design */}
+      <section className="relative pt-24 sm:pt-32 overflow-hidden min-h-screen flex items-center">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video 
@@ -22,51 +22,82 @@ export default function Home() {
             <source src="/resources/videos/romtech.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          {/* Dark overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/60"></div>
-          {/* Additional overlay for text contrast */}
-          <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-transparent to-red-900/20"></div>
+          {/* Professional gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/60 to-black/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40"></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-24 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 lg:py-32 w-full">
           {/* Centered Content */}
-          <div className="text-center mb-12">
-            {/* Fast Company Recognition Banner */}
-            <div className="inline-block mb-4">
-              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full text-base font-semibold bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 border-2 border-yellow-600 shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm">
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-                <span className="font-bold">Fast Company's Most Innovative Companies 2025</span>
-              </div>
-            </div>
-            <div className="inline-block mb-6">
-              <span className="inline-flex items-center px-6 py-3 rounded-full text-lg font-semibold bg-white/90 backdrop-blur-sm text-red-700 border-2 border-white/50 shadow-lg">
-                <svg className="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+          <div className="text-center">
+            {/* Trust Badges - Refined Design */}
+            <div className="flex flex-wrap justify-center items-center gap-4 mb-8">
+              <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-lg text-sm font-medium bg-white/95 backdrop-blur-md text-gray-900 border border-white/20 shadow-lg">
+                <svg className="w-5 h-5 text-red-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                FDA Approved Medical Device
-              </span>
+                <span>FDA Approved Medical Device</span>
+              </div>
+              <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-lg text-sm font-medium bg-gradient-to-r from-amber-50 to-yellow-50 backdrop-blur-md text-gray-900 border border-amber-200/50 shadow-lg">
+                <svg className="w-5 h-5 text-amber-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <span>Most Innovative Companies 2025</span>
+              </div>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-2xl">
-              The Modern Technology of
-              <span className="block text-red-400 mt-3">
-                Medical Rehabilitation®�
+            {/* Main Heading - Professional Typography */}
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.1] mb-8 tracking-tight">
+              <span className="block mb-2">The Modern Technology of</span>
+              <span className="block bg-gradient-to-r from-red-400 via-red-500 to-red-600 bg-clip-text text-transparent">
+                Medical Rehabilitation®
               </span>
             </h1>
             
-            <p className="text-xl sm:text-2xl lg:text-3xl text-white leading-relaxed max-w-5xl mx-auto mb-10 font-medium drop-shadow-lg">
-              The <span className="font-bold">PortableConnect®�</span> is a medical device that delivers 
-              <span className="font-bold"> clinician-controlled physical therapy sessions</span> to patients 
-              in their homes. Recover from knee replacement, hip replacement, ACL, and other surgeries in 
-              <span className="font-bold text-red-400"> half the time</span> with faster outcomes and better pain management.
-            </p>
-            <p className="text-lg sm:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-4xl mx-auto font-medium drop-shadow-lg">
-              Designed for older adults: start gentle motion at home, reduce clinic trips, and keep care Medicare-friendly with coverage by most insurance plans.
-            </p>
-          </div>
+            {/* Subheading - Clear Value Proposition */}
+            <div className="max-w-4xl mx-auto mb-12 space-y-4">
+              <p className="text-xl sm:text-2xl lg:text-3xl text-white/95 leading-relaxed font-light">
+                <span className="font-semibold text-white">PortableConnect®</span> delivers 
+                <span className="font-semibold text-white"> clinician-controlled physical therapy</span> directly to patients' homes
+              </p>
+              <p className="text-lg sm:text-xl lg:text-2xl text-white/85 leading-relaxed font-light">
+                Accelerate recovery from knee replacement, hip replacement, ACL, and other orthopedic surgeries with 
+                <span className="font-semibold text-red-300"> faster outcomes</span> and 
+                <span className="font-semibold text-red-300"> superior pain management</span>
+              </p>
+            </div>
 
+            {/* Key Benefits - Professional Icons */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+              <div className="flex flex-col items-center text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+                <div className="w-14 h-14 bg-red-500/20 rounded-full flex items-center justify-center mb-4">
+                  <svg className="w-7 h-7 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-white font-semibold text-lg mb-2">Faster Recovery</h3>
+                <p className="text-white/70 text-sm">Recover in half the time</p>
+              </div>
+              <div className="flex flex-col items-center text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+                <div className="w-14 h-14 bg-red-500/20 rounded-full flex items-center justify-center mb-4">
+                  <svg className="w-7 h-7 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                </div>
+                <h3 className="text-white font-semibold text-lg mb-2">Home-Based Care</h3>
+                <p className="text-white/70 text-sm">Therapy in the comfort of home</p>
+              </div>
+              <div className="flex flex-col items-center text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+                <div className="w-14 h-14 bg-red-500/20 rounded-full flex items-center justify-center mb-4">
+                  <svg className="w-7 h-7 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="text-white font-semibold text-lg mb-2">Insurance Covered</h3>
+                <p className="text-white/70 text-sm">Medicare and most plans accepted</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -87,13 +118,13 @@ export default function Home() {
               </span>
             </div>
             <h2 className="text-4xl lg:text-6xl font-extrabold text-gray-900 mb-6">
-              See How PortableConnect®�
+              See How PortableConnect®
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-700 mt-3">
                 Transforms Recovery
               </span>
             </h2>
             <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Watch real patients demonstrate how PortableConnect®� delivers clinician-controlled therapy sessions 
+              Watch real patients demonstrate how PortableConnect® delivers clinician-controlled therapy sessions 
               in the comfort of their homes. Experience the device in action and see how it accelerates recovery.
             </p>
           </div>
@@ -145,7 +176,7 @@ export default function Home() {
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-white text-lg lg:text-xl font-bold mb-1">
-                        PortableConnect®� in Action
+                        PortableConnect® in Action
                       </p>
                       <p className="text-white/80 text-sm lg:text-base">
                         Real patient demonstrations and device features
@@ -215,7 +246,7 @@ export default function Home() {
             <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
               The Power of
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-700 mt-2">
-                PortableConnect®�
+                PortableConnect®
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -352,7 +383,7 @@ export default function Home() {
                 Faster Recovery, Better Results
               </h2>
               <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Join thousands of patients who have completed millions of therapy sessions with PortableConnect®�. 
+                Join thousands of patients who have completed millions of therapy sessions with PortableConnect®. 
                 Recover in half the time with clinician-controlled therapy delivered to your home.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -378,17 +409,6 @@ export default function Home() {
                     </svg>
                   </span>
                 </Link>
-                {/* <Link
-                  href="/testimonials"
-                  className="group bg-white/10 backdrop-blur-sm border-2 border-white/20 text-white px-10 py-5 rounded-xl font-semibold text-lg hover:bg-white/20 hover:border-white/40 transition-all duration-300"
-                >
-                  <span className="flex items-center justify-center gap-2">
-                    Read Success Stories
-                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </span>
-                </Link> */}
               </div>
             </div>
           </div>
@@ -399,3 +419,4 @@ export default function Home() {
     </div>
   );
 }
+

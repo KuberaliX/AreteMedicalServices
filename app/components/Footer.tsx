@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-2xl font-bold text-red-600 mb-4">ROMTech</h3>
+            <h3 className="text-2xl font-bold text-red-600 mb-4">Arete Medical Services LLC</h3>
             <p className="text-gray-400">
               The Modern Technology of Medical Rehabilitation®. Improving patient outcomes through cutting-edge rehabilitation technologies.
             </p>
@@ -54,8 +54,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} ROM Technologies, Inc. All rights reserved.</p>
-          <p className="mt-2 text-sm">101 Silvermine Road, Brookfield, CT 06804 | (888) 374-0855</p>
+          <p>&copy; {new Date().getFullYear()} Arete Medical Services LLC. All rights reserved.</p>
         </div>
       </div>
     </footer>
