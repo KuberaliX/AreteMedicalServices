@@ -169,6 +169,206 @@ export default function Research() {
         </div>
       </section>
 
+      {/* Clinically Proven Results Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-block mb-4">
+              <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-blue-100 text-blue-700 border border-blue-200">
+                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                  <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
+                </svg>
+                Published Research
+              </span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
+              Clinically Proven Results
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              A peer-reviewed study published in the <span className="font-semibold">Journal of Arthroplasty</span> demonstrates 
+              superior outcomes with PortableConnect® compared to standard physical therapy
+            </p>
+          </div>
+
+          {/* Study Highlights */}
+          <div className="bg-gradient-to-br from-red-600 to-red-700 rounded-3xl p-8 lg:p-12 text-white shadow-2xl mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="text-4xl lg:text-5xl font-extrabold mb-2">31%</div>
+                <div className="text-lg font-bold mb-1">Less Pain</div>
+                <div className="text-sm text-red-100 mb-2">P&lt;0.0001</div>
+                <div className="text-xs text-red-200">3.6 vs 5.2 at 6 weeks</div>
+              </div>
+              <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="text-4xl lg:text-5xl font-extrabold mb-2">30%</div>
+                <div className="text-lg font-bold mb-1">Higher KOOS JR</div>
+                <div className="text-sm text-red-100 mb-2">P&lt;0.0001</div>
+                <div className="text-xs text-red-200">84.0 vs 74.3 at 12 weeks</div>
+              </div>
+              <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="text-4xl lg:text-5xl font-extrabold mb-2">3x</div>
+                <div className="text-lg font-bold mb-1">Fewer MUA</div>
+                <div className="text-sm text-red-100 mb-2">P=0.28</div>
+                <div className="text-xs text-red-200">2 vs 6 procedures</div>
+              </div>
+              <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="text-4xl lg:text-5xl font-extrabold mb-2">4x</div>
+                <div className="text-lg font-bold mb-1">More Sessions</div>
+                <div className="text-sm text-red-100 mb-2">Over 12 weeks</div>
+                <div className="text-xs text-red-200">84 vs 19 sessions</div>
+              </div>
+            </div>
+
+            {/* Visual Highlights from the Journal of Arthroplasty study */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-6 text-center">Study Results at a Glance</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Sessions */}
+                <div className="p-6 bg-white/5 rounded-xl border border-white/20">
+                  <p className="text-lg font-semibold mb-3">Total Therapy Sessions (12 weeks)</p>
+                  <div className="flex items-end gap-4 mb-3">
+                    <div className="flex-1">
+                      <div className="text-sm text-red-100 mb-1">PortableConnect®</div>
+                      <div className="h-28 bg-white/15 rounded-lg overflow-hidden relative">
+                        <div className="absolute bottom-0 left-0 right-0 bg-white/90" style={{ height: '100%' }}></div>
+                        <div className="absolute inset-0 flex items-end justify-center pb-2">
+                          <span className="text-3xl font-extrabold text-red-700 drop-shadow-sm">84</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-sm text-red-100 mb-1">Standard PT</div>
+                      <div className="h-28 bg-white/15 rounded-lg overflow-hidden relative">
+                        <div className="absolute bottom-0 left-0 right-0 bg-white/60" style={{ height: '23%' }}></div>
+                        <div className="absolute inset-0 flex items-end justify-center pb-2">
+                          <span className="text-3xl font-extrabold text-gray-900 drop-shadow-sm">19</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-red-100 font-semibold">4x more sessions completed with PortableConnect®</p>
+                </div>
+
+                {/* Pain reduction */}
+                <div className="p-6 bg-white/5 rounded-xl border border-white/20">
+                  <p className="text-lg font-semibold mb-3">Pain Scores</p>
+                  <div className="space-y-3 text-sm">
+                    <div className="flex items-center justify-between text-red-100">
+                      <span>6 weeks</span>
+                      <span className="font-semibold">3.6 vs 5.2</span>
+                    </div>
+                    <div className="flex items-center justify-between text-red-100">
+                      <span>12 weeks</span>
+                      <span className="font-semibold">1.4 vs 2.9</span>
+                    </div>
+                  </div>
+                  <div className="mt-4 h-2 bg-white/15 rounded-full overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-yellow-300 to-orange-400" style={{ width: '31%' }}></div>
+                  </div>
+                  <p className="text-red-100 font-semibold mt-2">31% less pain (P&lt;0.0001)</p>
+                </div>
+
+                {/* Range of motion */}
+                <div className="p-6 bg-white/5 rounded-xl border border-white/20">
+                  <p className="text-lg font-semibold mb-3">Range of Motion (6 weeks)</p>
+                  <div className="space-y-2 text-sm text-red-100">
+                    <div className="flex items-center justify-between">
+                      <span>Flexion</span>
+                      <span className="font-semibold">116.7° vs 101.8°</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span>Extension</span>
+                      <span className="font-semibold">-1.8° vs -3.7°</span>
+                    </div>
+                  </div>
+                  <div className="mt-4">
+                    <div className="flex items-center gap-2 text-sm text-red-100">
+                      <span className="inline-flex w-2 h-2 rounded-full bg-white"></span>
+                      <span>15% better flexion; 51% better extension</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* KOOS JR */}
+                <div className="p-6 bg-white/5 rounded-xl border border-white/20">
+                  <p className="text-lg font-semibold mb-3">KOOS JR (Knee Outcome)</p>
+                  <div className="space-y-3 text-sm text-red-100">
+                    <div className="flex items-center justify-between">
+                      <span>6 weeks</span>
+                      <span className="font-semibold">60.8 vs 46.6</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span>12 weeks</span>
+                      <span className="font-semibold">84.0 vs 74.3</span>
+                    </div>
+                  </div>
+                  <div className="mt-4 h-2 bg-white/15 rounded-full overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-yellow-300 to-orange-400" style={{ width: '30%' }}></div>
+                  </div>
+                  <p className="text-red-100 font-semibold mt-2">30% higher KOOS JR (P&lt;0.0001)</p>
+                </div>
+
+                {/* MUA */}
+                <div className="p-6 bg-white/5 rounded-xl border border-white/20">
+                  <p className="text-lg font-semibold mb-3">Manipulation Under Anesthesia (12 weeks)</p>
+                  <div className="flex items-end gap-4 mb-3">
+                    <div className="flex-1">
+                      <div className="text-sm text-red-100 mb-1">PortableConnect®</div>
+                      <div className="h-20 bg-white/15 rounded-lg overflow-hidden relative">
+                        <div className="absolute bottom-0 left-0 right-0 bg-white/90" style={{ height: '33%' }}></div>
+                        <div className="absolute inset-0 flex items-end justify-center pb-1">
+                          <span className="text-2xl font-extrabold text-red-700 drop-shadow-sm">2</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-sm text-red-100 mb-1">Standard PT</div>
+                      <div className="h-20 bg-white/15 rounded-lg overflow-hidden relative">
+                        <div className="absolute bottom-0 left-0 right-0 bg-white/60" style={{ height: '100%' }}></div>
+                        <div className="absolute inset-0 flex items-end justify-center pb-1">
+                          <span className="text-2xl font-extrabold text-gray-900 drop-shadow-sm">6</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-red-100 font-semibold">3x fewer MUA procedures (P=0.28)</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="text-2xl font-bold mb-4">Study Overview</h3>
+              <div className="grid md:grid-cols-2 gap-4 text-sm mb-4">
+                <div>
+                  <p className="font-semibold mb-2">270 Consecutive TKA Patients</p>
+                  <p className="text-red-100">135 PortableConnect® vs 135 Standard Therapy</p>
+                </div>
+                <div>
+                  <p className="font-semibold mb-2">Published: October 14, 2022</p>
+                  <p className="text-red-100">Journal of Arthroplasty</p>
+                </div>
+              </div>
+              <div className="grid md:grid-cols-2 gap-4 text-sm mb-4">
+                <div>
+                  <p className="font-semibold mb-2">Range of Motion at 6 Weeks:</p>
+                  <p className="text-red-100">116.7° flexion vs 101.8° (↑15%) | -1.8° vs -3.7° extension (↑51%)</p>
+                </div>
+                <div>
+                  <p className="font-semibold mb-2">Pain Scores at 12 Weeks:</p>
+                  <p className="text-red-100">1.4 vs 2.9 (PortableConnect® vs Standard Therapy)</p>
+                </div>
+              </div>
+              <p className="text-red-100 mt-4 text-sm">
+                <strong>Conclusion:</strong> PortableConnect was superior to standard physical therapy protocol following TKA. 
+                Statistically significant differences were found at all time points (2, 6, and 12 weeks) for all outcome measures 
+                in favor of PortableConnect®.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Results Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
