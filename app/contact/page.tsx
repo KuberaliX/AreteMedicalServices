@@ -12,13 +12,39 @@ export default function Contact() {
     role: 'patient',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', role: 'patient', message: '' });
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', phone: '', role: 'patient', message: '' });
+        setTimeout(() => setSubmitStatus('idle'), 5000);
+      } else {
+        setSubmitStatus('error');
+        console.error('Error:', data.error);
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      console.error('Error submitting form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -62,7 +88,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900 mb-1">Phone</p>
-                    <p className="text-gray-600">(888) 374-0855</p>
+                    <p className="text-gray-600">7138329971</p>
                     <p className="text-sm text-gray-500 mt-1">Available Monday - Friday, 8:00 AM - 6:00 PM EST</p>
                   </div>
                 </div>
@@ -74,38 +100,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900 mb-1">Email</p>
-                    <p className="text-gray-600">info@romtech.com</p>
+                    <p className="text-gray-600">ghodge@aretemedicalservices.com</p>
                     <p className="text-sm text-gray-500 mt-1">We typically respond within 24 hours</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
                   </div>
                 </div>
               </div>
 
-              {/* Quick Actions */}
-              <div className="bg-red-50 rounded-xl p-6">
-                <h4 className="font-semibold text-gray-900 mb-4">Quick Actions</h4>
-                <div className="space-y-3">
-                  <a href="#" className="block text-red-600 font-medium hover:text-red-700 transition-colors">
-                    Find a Prescribing Surgeon →
-                  </a>
-                  <a href="#" className="block text-red-600 font-medium hover:text-red-700 transition-colors">
-                    Request PortableConnect® →
-                  </a>
-                  <a href="#" className="block text-red-600 font-medium hover:text-red-700 transition-colors">
-                    Clinician Portal Login →
-                  </a>
-                  <a href="#" className="block text-red-600 font-medium hover:text-red-700 transition-colors">
-                    Request a Demo →
-                  </a>
-                </div>
-              </div>
             </div>
 
             {/* Contact Form */}
@@ -170,7 +170,6 @@ export default function Contact() {
                   >
                     <option value="patient">Patient</option>
                     <option value="clinician">Clinician / Healthcare Provider</option>
-                    <option value="caregiver">Caregiver</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
@@ -191,10 +190,21 @@ export default function Contact() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  disabled={isSubmitting}
+                  className="w-full bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-700 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
+                {submitStatus === 'success' && (
+                  <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
+                    <p className="font-semibold">Thank you for your message! We will get back to you soon.</p>
+                  </div>
+                )}
+                {submitStatus === 'error' && (
+                  <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
+                    <p className="font-semibold">There was an error sending your message. Please try again or contact us directly at ghodge@aretemedicalservices.com</p>
+                  </div>
+                )}
               </form>
             </div>
           </div>
