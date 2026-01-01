@@ -14,11 +14,13 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
+    setErrorMessage('');
 
     try {
       const response = await fetch('/api/contact', {
@@ -37,6 +39,7 @@ export default function Contact() {
         setTimeout(() => setSubmitStatus('idle'), 5000);
       } else {
         setSubmitStatus('error');
+        setErrorMessage(data.error || 'Failed to send message. Please try again.');
         console.error('Error:', data.error);
       }
     } catch (error) {
@@ -202,7 +205,9 @@ export default function Contact() {
                 )}
                 {submitStatus === 'error' && (
                   <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
-                    <p className="font-semibold">There was an error sending your message. Please try again or contact us directly at ghodge@aretemedicalservices.com</p>
+                    <p className="font-semibold">There was an error sending your message.</p>
+                    {errorMessage && <p className="mt-2 text-sm">{errorMessage}</p>}
+                    <p className="mt-2 text-sm">Please contact us directly at ghodge@aretemedicalservices.com</p>
                   </div>
                 )}
               </form>
