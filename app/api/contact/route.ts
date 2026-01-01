@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY || 're_placeholder');
+const apiKey = process.env.RESEND_API_KEY;
 
 export async function POST(request: NextRequest) {
   try {
@@ -16,10 +16,23 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Check if API key is configured
+    if (!apiKey || apiKey === 're_placeholder') {
+      console.error('RESEND_API_KEY is not configured');
+      return NextResponse.json(
+        { error: 'Email service is not configured. Please contact the administrator.' },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(apiKey);
+
     // Send email using Resend
     const { data, error } = await resend.emails.send({
-      from: 'Contact Form <onboarding@resend.dev>', // You'll need to verify a domain with Resend
-      to: ['ghodge@aretemedicalservices.com'],
+      from: 'Contact Form <onboarding@resend.dev>',
+      //to: ['ghodge@aretemedicalservices.com'],
+      to: ['prajeetbh7@gmail.com'],
+      replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -46,7 +59,7 @@ ${message}
     if (error) {
       console.error('Resend error:', error);
       return NextResponse.json(
-        { error: 'Failed to send email' },
+        { error: error.message || 'Failed to send email. Please try again later.' },
         { status: 500 }
       );
     }
@@ -58,7 +71,7 @@ ${message}
   } catch (error) {
     console.error('Contact form error:', error);
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: error instanceof Error ? error.message : 'Internal server error' },
       { status: 500 }
     );
   }
