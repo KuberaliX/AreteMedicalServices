@@ -12,42 +12,27 @@ export default function Contact() {
     role: 'patient',
     message: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-    setErrorMessage('');
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', phone: '', role: 'patient', message: '' });
-        setTimeout(() => setSubmitStatus('idle'), 5000);
-      } else {
-        setSubmitStatus('error');
-        setErrorMessage(data.error || 'Failed to send message. Please try again.');
-        console.error('Error:', data.error);
-      }
-    } catch (error) {
-      setSubmitStatus('error');
-      console.error('Error submitting form:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
+    
+    // Create mailto link
+    const subject = encodeURIComponent(`Contact from ${formData.name} - ${formData.role}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Phone: ${formData.phone || 'Not provided'}\n` +
+      `Role: ${formData.role}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    
+    const mailtoLink = `mailto:ghodge@aretemedicalservices.com?subject=${subject}&body=${body}`;
+    
+    // Open email app
+    window.location.href = mailtoLink;
+    
+    // Reset form
+    setFormData({ name: '', email: '', phone: '', role: 'patient', message: '' });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -91,8 +76,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900 mb-1">Phone</p>
-                    <p className="text-gray-600">7138329971</p>
-                    <p className="text-sm text-gray-500 mt-1">Available Monday - Friday, 8:00 AM - 6:00 PM EST</p>
+                    <p className="text-gray-600">+1 (713) 832-9971</p>
+                    <p className="text-sm text-gray-500 mt-1">Available 24/7</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -108,7 +93,6 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-
             </div>
 
             {/* Contact Form */}
@@ -173,6 +157,7 @@ export default function Contact() {
                   >
                     <option value="patient">Patient</option>
                     <option value="clinician">Clinician / Healthcare Provider</option>
+                    <option value="caregiver">Caregiver</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
@@ -193,23 +178,10 @@ export default function Contact() {
                 </div>
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-700 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  Send Message
                 </button>
-                {submitStatus === 'success' && (
-                  <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
-                    <p className="font-semibold">Thank you for your message! We will get back to you soon.</p>
-                  </div>
-                )}
-                {submitStatus === 'error' && (
-                  <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
-                    <p className="font-semibold">There was an error sending your message.</p>
-                    {errorMessage && <p className="mt-2 text-sm">{errorMessage}</p>}
-                    <p className="mt-2 text-sm">Please contact us directly at ghodge@aretemedicalservices.com</p>
-                  </div>
-                )}
               </form>
             </div>
           </div>

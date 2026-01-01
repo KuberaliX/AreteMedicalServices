@@ -50,7 +50,7 @@ export default function Home() {
             <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.1] mb-8 tracking-tight">
               <span className="block mb-2">The Modern Technology of</span>
               <span className="block bg-gradient-to-r from-red-400 via-red-500 to-red-600 bg-clip-text text-transparent">
-                Medical Rehabilitation®
+                Medical Rehabilitation
               </span>
             </h1>
             
